@@ -20,11 +20,11 @@ cols = [dict(Counter(col)) == correct for col in board.T]
 #Check Boxes
 boxes = []
 for i in range(0,9,3):
-	for j in range(0,9,3):
-		box = board[i:i+3,j:j+3].flatten()
-		boxes.append( dict(Counter(box)) == correct )
+    for j in range(0,9,3):
+        box = board[i:i+3,j:j+3].flatten()
+        boxes.append( dict(Counter(box)) == correct )
 
 if all(rows) & all(cols) & all(boxes):
-	print('\n\nSudoku is Valid\n\n')
+    print('\n\nSudoku is Valid\n\n')
 else:
-	print('\n\nSudoku is INVALID\n\n')
+    print('\n\nSudoku is INVALID\n\n')
